@@ -3,19 +3,13 @@ import sys
 from clases import Barco
 from clases import Case
 from clases import Tablero
-
-
-
-
 from introducir import (
     solicitar_introducir_si_o_no,
     solicitar_introducir_casilla,
 )
 
-
 LONGITUDES_BARCOS = [2, 3, 3, 4, 4, 5]
 ORDINAL = 0x2680
-
 
 HORIZONTAL = 0
 VERTICAL = 1

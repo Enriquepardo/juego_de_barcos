@@ -1,6 +1,6 @@
 from itertools import product
-from clases import Conventions
-from clases import Case
+import Conventions
+import Case
 from clases.Barco import generar_barcos
 from clases.Case import generar_casillas
 
