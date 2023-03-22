@@ -39,12 +39,11 @@ def jugar_tirada(self):
                 casilla.jugar()
                 break
 
+
 def jugar_una_partida():
     """Algoritmo de una partida"""
     # Creamos un tablero de juego vacío
-
-    tablero = Tablero()
-
+    tablero = [['[]' for j in range(num_columnas)] for i in range(num_lineas)]
 
     while True:
         tablero.ver()

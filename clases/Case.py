@@ -1,5 +1,6 @@
 from itertools import product 
-import Conventions
+from clases import Conventions
+
 from clases.Conventions import (
     tablero_num_lineas,
     tablero_num_columnas,
@@ -26,8 +27,6 @@ def __init__(self, x, y):
   
   # Generación del nombre de la casilla
   
-
-
   self._generar_nombre()
 
   # Queremos poder acceder a una casilla a partir de su nombre
