@@ -13,7 +13,8 @@ num2c = Conventions.generar_num_columna
 @staticmethod
 def __init__(self):
 # Creamos las casillas:
-  generar_casillas()
+
+  generar_casillas() 
 # Creamos los barcos:
   generar_barcos()
  # Creamos la herramienta para poder seguir la situación
