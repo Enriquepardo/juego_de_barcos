@@ -25,7 +25,7 @@ class barco:
     def horizontal(self):
         if self.orientacion == HORIZONTAL:
             rang = choice(range(num_lineas))
-            primero = choice(range(num_columnas + 1 - LONGITUDES_BARCOS))
+            primero = choice(range((num_columnas + 1 - LONGITUDES_BARCOS)))
             letra = num2l(rang)
             cifras = [num2c(x) for x in range(primero, primero + LONGITUDES_BARCOS)]
             self.casillas = {Case.instances[l + c]
