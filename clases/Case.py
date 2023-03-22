@@ -1,8 +1,5 @@
-from numpy import product
-from clases import Barco
-from clases import Tablero
-from clases import Case
-from juego import CASO_AGUA, CASO_NO_JUGADO, CASO_TOCADO
+from itertools import product 
+import Conventions
 from clases.Conventions import (
     tablero_num_lineas,
     tablero_num_columnas,
@@ -10,6 +7,11 @@ from clases.Conventions import (
     generar_num_columna,
     generar_nombre_casilla
 )
+
+CASO_NO_JUGADO = chr(0x2610)
+CASO_TOCADO = chr(0x2611)
+CASO_AGUA = chr(0x2612)
+
 instances = {}
 jugadas = set()
 
@@ -45,7 +47,7 @@ def jugar(self):
   self.jugadas.add(self)
   
   if self.barco is not None:
-      if len(casillas - self.casillas_jugadas) == 0:
+      if len(self.casillas - self.casillas_jugadas) == 0:
           print("Hundido !!")
       else:
           print("Tocado !")
@@ -53,10 +55,13 @@ def jugar(self):
       print("Agua !")
 
 @classmethod
-def generar_casillas():
-  for x, y in product(range(tablero_num_lineas),
-                      range(tablero_num_columnas)):
-      Case(x, y)
+def generar_casillas(cls):
+    for x, y in product(range(Conventions.tablero_num_lineas),
+                        range(Conventions.tablero_num_columnas)):
+        instance = cls(x, y)
+        cls.instances[x, y] = instance
+        cls.instances[instance.nombre] = instance
+
 
 def __str__(self):
   """Sobrecarga del método de transformación en cadena"""

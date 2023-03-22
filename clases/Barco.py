@@ -1,9 +1,7 @@
-
-from clases import Conventions
-from clases import Case
+import Conventions
+import Case
 from itertools import product, repeat
 from random import choice
-
 from juego import HORIZONTAL, LONGITUDES_BARCOS, ORIENTACIONES
 
 
@@ -73,6 +71,3 @@ def generar_barcos(self):
             if len(instances) == len(Conventions.barcos_longitud):
                 break
 
-
-
-        
