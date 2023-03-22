@@ -1,6 +1,7 @@
 # juego_de_barcos
-Arreglar el código de este ejemplo
+Codiog del ejemplo arreglado
 
-leer por favor
-https://boscacci.medium.com/why-and-how-to-make-a-requirements-txt-f329c685181e
 
+github usernam: Enriquepardo
+
+link repositorio: https://github.com/Enriquepardo/juego_de_barcos.git
